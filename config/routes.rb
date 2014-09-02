@@ -1,7 +1,8 @@
 TicApp::Application.routes.draw do
-  get "static_pages/home"
-  get "static_pages/submit"
-  get "static_pages/view"
+  root  'static_pages#home'
+  match '/submit',    to: 'static_pages#submit',    via: 'get'
+  match '/view',   to: 'static_pages#view',   via: 'get'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

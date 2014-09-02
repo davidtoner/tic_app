@@ -1,7 +1,15 @@
 <% provide(:title, 'Home') %>
 
+
+<div class="center hero-unit">
     <h1>Display Data Submission Tool</h1>
+
     <p>
       This is the homepage for a tool to submit display test data
     </p>
+
+    <%= link_to "Submit Data Now!", submit_path, class: "btn btn-large btn-primary" %>
   
+
+    <%= link_to "View Data Now!", view_path, class: "btn btn-large btn-primary" %>
+</div>
