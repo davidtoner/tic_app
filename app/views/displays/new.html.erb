@@ -1,2 +1,69 @@
-<h1>Displays#new</h1>
-<p>Find me in app/views/displays/new.html.erb</p>
+<% provide(:title, 'Submit Data') %>
+<h1>Submit Data</h1>
+
+<div class="row">
+  	<div class="span6 offset1">
+    <%= form_for(@display) do |f| %>
+    <%= render 'shared/error_messages' %>
+      <%= f.label :user_name %>
+      <%= f.text_field :user_name %>
+  	</div>
+	<div class="span6 offset1">
+      <%= f.label :t_number %>
+      <%= f.text_field :t_num %>
+    </div>
+</div>
+
+<div class="row">
+	<div class="span6 offset1">
+	      <%= f.label :Manufacturer %>
+	      <%= f.text_field :mfr %>
+	</div>
+	<div class="span6 offset1">
+	      <%= f.label :Model %>
+	      <%= f.text_field :mdl %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span6 offset1">
+	      <%= f.label :Black_Level %>
+	      <%= f.text_field :bl_lvl %>
+	</div>
+	<div class="span6 offset1">
+	      <%= f.label :White_level %>
+	      <%= f.text_field :wh_lvl %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span6 offset1">
+	      <%= f.label :Keypad_Normal_Light %>
+	      <%= f.text_field :kpn %>
+	</div>
+	<div class="span6 offset1">
+	      <%= f.label :Keypad_Bright_Light %>
+	      <%= f.text_field :kpb %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span6 offset1">
+	      <%= f.label :Incoming_Number %>
+	      <%= f.text_field :in_num %>
+	</div>
+	<div class="span6 offset1">
+	      <%= f.label :Number_Dialed %>
+	      <%= f.text_field :num_d %>
+	</div>
+</div>
+
+
+
+<div class = "col-md-4 text-center">
+      <%= f.submit "Submit Data", class: "btn btn-large btn-primary" %>
+    <% end %>
+</div>
+
+  </div>
+</div>
