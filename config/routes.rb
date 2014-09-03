@@ -1,6 +1,7 @@
 TicApp::Application.routes.draw do
+  resources :displays
   root  'static_pages#home'
-  match '/submit',    to: 'static_pages#submit',    via: 'get'
+  match '/submit',    to: 'displays#new',    via: 'get'
   match '/view',   to: 'static_pages#view',   via: 'get'
   
   # The priority is based upon order of creation: first created -> highest priority.
