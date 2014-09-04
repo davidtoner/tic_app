@@ -27,6 +27,16 @@
 <td><%= @display.in_num %></td>
 <td><%= @display.num_d %></td>
   </tr>
+ 
+        <tr>                          
+    <th>Keypad</th>
+    <th>Number Dialed/read</th>
+    
+  </tr>
+  <tr>
+<td><%= @display.kpn*0.65+@display.kpb*0.35 %></td>
+<td><%= @display.in_num*0.65+@display.num_d*0.35 %></td>
+</tr>
       </table>
     </section>
   </aside>
