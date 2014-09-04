@@ -1,10 +1,33 @@
 <% provide(:title, @display.t_num) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span12">
     <section>
-      <h1>
-<%= @display.user_name %>,<%= @display.t_num %>, <%= @display.mfr %>, <%= @display.mdl %>, <%= @display.bl_lvl %>, <%= @display.wh_lvl %>, <%= @display.kpn %>, <%= @display.kpb %>, <%= @display.in_num %>,<%= @display.num_d %>
-      </h1>
+      <table>
+        <tr>                          
+    <th>user_name</th>
+    <th>t_num</th>
+    <th>mfr</th>
+    <th>model</th>
+    <th>bl_lvl</th>
+    <th>wh_lvl</th>
+    <th>kpn</th>
+    <th>kpb</th>
+    <th>in_num</th>
+    <th>num_d</th>
+  </tr>
+  <tr>
+<td><%= @display.user_name %></td>
+<td><%= @display.t_num %></td>
+<td><%= @display.mfr %></td>
+<td><%= @display.mdl %></td>
+<td><%= @display.bl_lvl %></td>
+<td><%= @display.wh_lvl %></td>
+<td><%= @display.kpn %></td>
+<td><%= @display.kpb %></td>
+<td><%= @display.in_num %></td>
+<td><%= @display.num_d %></td>
+  </tr>
+      </table>
     </section>
   </aside>
 </div>
