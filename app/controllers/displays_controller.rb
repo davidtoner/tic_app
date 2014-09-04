@@ -1,10 +1,20 @@
 class DisplaysController < ApplicationController
+  def index
+    @displays = Display.paginate(page: params[:page])
+  end
+
   def show
     @display = Display.find(params[:id])
   end
 
   def new
     @display = Display.new
+  end
+
+   def destroy
+    Display.find(params[:id]).destroy
+    flash[:success] = "Data deleted."
+    redirect_to displays_url
   end
 
 

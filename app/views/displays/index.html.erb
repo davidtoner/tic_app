@@ -1,0 +1,16 @@
+<% provide(:title, 'All Display Data') %>
+<h1>All Display Data</h1>
+
+<%= will_paginate%>
+
+<ul class="displays">
+  <% @displays.each do |display| %>
+    <li>      
+      <%= link_to display.t_num, display %>
+       | <%= link_to "delete", display, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
